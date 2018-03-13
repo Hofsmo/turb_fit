@@ -1,2 +1,2 @@
 # turb_fit
-Functions useful for hydro turbine identification
+This toolbox provides functions useful for identifying hydro turbines using PMU measurements and signals from the plant. 
