@@ -19,5 +19,4 @@ else
     data = iddata(yd(1:T1),ud(1:T1),Tsd);
     validation_data = iddata(yd(T1+1:end),ud(T1+1:end), Tsd);
 end
-end
 
