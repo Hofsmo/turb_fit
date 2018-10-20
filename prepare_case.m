@@ -16,7 +16,7 @@ if T==-1
     data = detrend(iddata(yd,ud,Tsd));
     validation_data = [];
 else
-    data = iddata(yd(1:T1),ud(1:T1),Tsd);
-    validation_data = iddata(yd(T1+1:end),ud(T1+1:end), Tsd);
+    data = detrend(iddata(yd(1:T1),ud(1:T1),Tsd));
+    validation_data = detrend(iddata(yd(T1+1:end),ud(T1+1:end), Tsd));
 end
 
