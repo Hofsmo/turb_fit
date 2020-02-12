@@ -1,4 +1,4 @@
-function [t, f_sim, g, Pe, f, uc] = read_fcp_data(fname)
+function [t, f, g, Pe, uc] = read_fcp_data_2(fname)
 % read file
 fid = fopen(fname);
 out = textscan(fid, '%s %s %s %s %s %s %s %s %s', 'HeaderLines', 1);
@@ -17,8 +17,7 @@ for i = 1:numel(out)
 end
 
 t = data(:,1); % time
-f_sim = data(:,2); % generated frequency signal
-g = data(:,4); % servo opening
-Pe = data(:,5); % electrical power
-f = data(:,6); % frequency
-uc = data(:,8); % output of PID
+f = data(:,2); % generated frequency signal
+g = data(:,3:7); % servo opening
+Pe = data(:,8); % electrical powers
+uc = data(:,9); % output of PID

@@ -1,4 +1,4 @@
-    function [G0, Gp, Hj, S] = create_G0(T1, T2, At, Tr, r, Tf, Tg, R, H, Kd,Dg,Tdel)
+function [G0, Gp, Hj, S, Gt, Gc, Gs] = create_G0(T1, T2, At, Tr, r, Tf, Tg, R, H, Kd,Dg,Tdel)
 
 s = tf('s');
 Gt = At*(1-s*T1)/(1+s*T2);
